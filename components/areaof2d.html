@@ -1,0 +1,269 @@
+<!DOCTYPE >
+<html>
+
+<head>
+	<title>Area of 2D Shapes</title>
+	<style type="text/css">
+	
+	body {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	
+	#mainh {
+		text-align: center;
+		padding: 10px;
+	}
+	
+	.areah {
+		text-align: center;
+		font-size: 23px;
+	}
+	
+	.area {}
+	
+	input[type=text] {
+		padding: 10px;
+		margin: 10px 0;
+		border: 2px solid #eee;
+		box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+		border-radius: 10px;
+		width: 50%;
+	}
+	
+	input[type=number] {
+		padding: 10px;
+		margin: 10px 0;
+		border: 0;
+		/*  border: 2px solid #eee;*/
+		box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+		border-radius: 10px;
+		width: 50%;
+	}
+	
+	input[type=button] {
+		/* remove default behavior */
+		appearance: none;
+		-webkit-appearance: none;
+		/* usual styles */
+		padding: 10px;
+		border: none;
+		background-color: #3F51B5;
+		color: #fff;
+		font-weight: 600;
+		border-radius: 5px;
+	}
+	
+	form {
+		margin-left: 40px;
+	}
+	</style>
+	<script type="text/javascript">
+	var pie = 22 / 7;
+	//area of circle
+	function areaofcircle() {
+		let input = document.getElementById("radiofcir").value;
+		let output = document.getElementById("arearesult");
+		parseFloat(input, output);
+		area = pie * input * input;
+		console.log(area);
+		output.value = "Area Of Circle Is " + area;
+	}
+	//Circumference of circle
+	function cirofcircle() {
+		let input = document.getElementById("cirofcir").value;
+		let output = document.getElementById("cirresult");
+		parseFloat(input, output);
+		let area = 2 * pie * input;
+		console.log(area);
+		output.value = "Area Of Circle Is " + area;
+	}
+
+	function areaofsquare() {
+		let input = document.getElementById("lengthofsquare").value;
+		let output = document.getElementById("resultareaofsquare");
+		parseFloat(input, output);
+		let area = input ** 2;
+		console.log("Area of square is " + area);
+		output.value = "Area of square is " + area;
+	}
+
+	function areaofrect() {
+		let inputl = document.getElementById("lengthofrect").value;
+		let inputb = document.getElementById("breathofrect").value;
+		let output = document.getElementById("resultareaofrect");
+		parseFloat(inputl, inputb, output);
+		let area = inputl * inputb;
+		console.log("Area of rectangle is " + area);
+		output.value = "Area of rectangle is " + area;
+	}
+
+	function areaoftri() {
+		let inputb = document.getElementById("baseoftri").value;
+		let inputh = document.getElementById("heightoftri").value;
+		let output = document.getElementById("resultareaoftri");
+		parseFloat(inputb, inputh, output);
+		let area = 1 / 2 * inputb * inputh;
+		console.log("Area of triangle is " + area);
+		output.value = "Area of triangle is " + area;
+	}
+
+	function areaofparall() {
+		let inputl = document.getElementById("lengthofparall").value;
+		let inputb = document.getElementById("breathofparall").value;
+		let output = document.getElementById("resultareaofparall");
+		parseFloat(inputl, inputb, output);
+		let area = inputl * inputb;
+		console.log("Area of parallelogram is " + area);
+		output.value = "Area of parallelogram is " + area;
+	}
+
+	function areaoftra() {
+		let inputl = document.getElementById("ulengthoftra").value;
+		let inputb = document.getElementById("llengthoftra").value;
+		let inputh = document.getElementById("heightoftra").value;
+		let output = document.getElementById("resultareaoftra");
+		let inputl2 = parseFloat(inputl);
+		let inputb2 = parseFloat(inputb);
+		let inputh2 = parseFloat(inputh);
+		parseFloat(output);
+		let area = [inputl2 + inputb2] / 2 * inputh2;
+		console.log("Area of trapezium is " + area);
+		output.value = "Area of trapezium is " + area;
+	}
+
+	function areaofrho() {
+		let inputl = document.getElementById("diaofrho").value;
+		let inputb = document.getElementById("dia2ofrho").value;
+		let output = document.getElementById("resultareaofrho");
+		parseFloat(inputl, inputb, output);
+		let area = [inputl * inputb] / 2 * 1;
+		console.log("Area of rhombus is " + area);
+		output.value = "Area of rhombus is " + area;
+	}
+	</script>
+	</script>
+	<link href="../style.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script type="text/javascript" src="../plugins/jquery.js">
+	</script>
+	<script type="text/javascript">
+	$(function() {
+		$("#navbar").load("./navbar.html")
+	})
+	</script>
+</head>
+
+<body>
+	<div id="navbar"></div>
+	<h1 id="mainh"> AREA OF SHAPES</h1>
+	<h3 class="areah"> Area Of Square </h3>
+	<form class="area" action=>
+		<fieldset>
+			<label>Enter Your Length : </label>
+			<input type="number" id="lengthofsquare" placeholder="length" />
+			<br>
+			<input type="button" value="Calculate" onclick="areaofsquare()" />
+			<input type="text" id="resultareaofsquare" placeholder="Ans : Area Of square" disabled="disabled" />
+			<br>
+			<input type="reset" value="reset"> </fieldset>
+	</form>
+	<h3 class="areah"> Area Of Rectangle </h3>
+	<form class="area" action=>
+		<fieldset>
+			<label>Enter Your Length : </label>
+			<input type="number" id="lengthofrect" placeholder="length" />
+			<br>
+			<label>Enter Your Breath : </label>
+			<input type="number" id="breathofrect" placeholder="breath" />
+			<br>
+			<input type="button" value="Calculate" onclick="areaofrect()" />
+			<input type="text" id="resultareaofrect" placeholder="Ans : Area Of rectangle" disabled="disabled" />
+			<br>
+			<input type="reset" value="reset"> </fieldset>
+	</form>
+	<h3 class="areah"> Area Of Triangle </h3>
+	<form class="area" action=>
+		<fieldset>
+			<label>Enter Your Base : </label>
+			<input type="number" id="baseoftri" placeholder="base" />
+			<br>
+			<label>Enter Your Height : </label>
+			<input type="number" id="heightoftri" placeholder="height" />
+			<br>
+			<input type="button" value="Calculate" onclick="areaoftri()" />
+			<input type="text" id="resultareaoftri" placeholder="Ans : Area Of Triangle" disabled="disabled" />
+			<br>
+			<input type="reset" value="reset"> </fieldset>
+	</form>
+	<h3 class="areah"> Area Of Parallelogram </h3>
+	<form class="area" action=>
+		<fieldset>
+			<label>Enter Your Length : </label>
+			<input type="number" id="lengthofparall" placeholder="length" />
+			<br>
+			<label>Enter Your Breath : </label>
+			<input type="number" id="breathofparall" placeholder="breath" />
+			<br>
+			<input type="button" value="Calculate" onclick="areaofparall()" />
+			<input type="text" id="resultareaofparall" placeholder="Ans : Area Of Parallelogram" disabled="disabled" />
+			<br>
+			<input type="reset" value="reset"> </fieldset>
+	</form>
+	<h3 class="areah"> Area Of Trapezium </h3>
+	<form class="area" action=>
+		<fieldset>
+			<label>Enter Your Upper Length : </label>
+			<input type="number" id="ulengthoftra" placeholder="Upper Length" />
+			<br>
+			<label>Enter Your Lower Length : </label>
+			<input type="number" id="llengthoftra" placeholder="Lower Length" />
+			<br>
+			<label>Enter Your Height : </label>
+			<input type="number" id="heightoftra" placeholder="height" />
+			<br>
+			<input type="button" value="Calculate" onclick="areaoftra()" />
+			<input type="text" id="resultareaoftra" placeholder="Ans : Area Of Trapezium " disabled="disabled" />
+			<br>
+			<input type="reset" value="reset"> </fieldset>
+	</form>
+	<h3 class="areah"> Area Of Rhombus </h3>
+	<form class="area" action=>
+		<fieldset>
+			<label>Enter Your Diagonal1 Length : </label>
+			<input type="number" id="diaofrho" placeholder="Diagonal1" />
+			<br>
+			<label>Enter Your Diagonal2 Length : </label>
+			<input type="number" id="dia2ofrho" placeholder="Diagonal2" />
+			<br>
+			<input type="button" value="Calculate" onclick="areaofrho()" />
+			<input type="text" id="resultareaofrho" placeholder="Ans : Area Of Rhombus" disabled="disabled" />
+			<br>
+			<input type="reset" value="reset"> </fieldset>
+	</form>
+	<h3 class="areah"> Area Of Circle :</h3>
+	<form action=>
+		<fieldset>
+			<label>Type your radius: </label>
+			<input type="number" id="radiofcir" placeholder="radius" />
+			<br>
+			<input type="button" value="Calculate" onclick="areaofcircle()" />
+			<input type="text" id="arearesult" placeholder="Ans : Area Of Circle " disabled="disabled" />
+			<br>
+			<input type="reset" value="reset"> </fieldset>
+	</form>
+	<h3 class="areah"> Circumference Of Circle :</h3>
+	<form action=>
+		<fieldset>
+			<label>Type your radius: </label>
+			<input type="number" id="cirofcir" placeholder="radius" />
+			<br>
+			<input type="button" value="Calculate" onclick="cirofcircle()" />
+			<input type="text" id="cirresult" placeholder="Ans :" disabled="disabled" />
+			<br>
+			<input type="reset" value="reset"> </fieldset>
+	</form>
+</body>
+
+</html>
